@@ -7,6 +7,7 @@ import Testimonilas from './Components/Testimonials/Testimonilas'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
+import Fjmain from './Components/farjicomponent/fjmain'
 function App() {
 const [playState,setPlayState]=useState(false);
 
@@ -18,6 +19,8 @@ const [playState,setPlayState]=useState(false);
     <About setPlayState={setPlayState} />
     <Title subtitle={"Gallery"} title={"Campus Photos"}/>
     <Campus/>
+    <Title subtitle={"TESTONOMIALS"} title={"What Student Says'"}/>
+    <Fjmain/>
     <Title subtitle={"TESTONOMIALS"} title={"What Student Says'"}/>
     <Testimonilas/>
     <Title subtitle={"Contact Us"} title={"Get In Touch'"}/>

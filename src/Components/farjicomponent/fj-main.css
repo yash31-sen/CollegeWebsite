@@ -1,0 +1,153 @@
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: white;
+}
+
+.fjmain-container {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/845/160/16/line-yellow-grey-background-black-hd-wallpaper-preview.jpg");
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fjmain-left-div,
+.fjmain-middle-div,
+.fjmain-right-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.fjmain-left-div {
+  width: 40%;
+}
+
+.fjmain-left-div h1 {
+  color: white;
+}
+
+.fjmain-left-div p {
+  color: white;
+}
+
+.fjmain-left-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.fjmain-middle-div {
+  width: 40%;
+}
+
+.fjmain-right-div {
+  width: 20%;
+  position: relative;
+}
+
+.fjmain-popup {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 1s ease-out;
+}
+
+.fjmain-popup.fjmain-popUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fjmain-image {
+  width: 100%;
+  margin: 0; /* No space between images */
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.3s ease;
+}
+
+.fjmain-image:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.fjmain-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png');
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.fjmain-image:hover::before {
+  opacity: 1;
+  animation: sparkle 1s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.fjmain-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.fjmain-paragraph {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.fjmain-button {
+  padding: 10px 20px;
+  background-color: #3e5772;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fjmain-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .fjmain-container {
+    flex-direction: column;
+    padding: 10px;
+    margin-right: 20px;
+  }
+  .fjmain-left-div,
+  .fjmain-middle-div,
+  .fjmain-right-div {
+    width: 100%;
+    margin: 5px -19px;
+  }
+  .fjmain-left-div {
+    margin: 5px -19px;
+  }
+}
