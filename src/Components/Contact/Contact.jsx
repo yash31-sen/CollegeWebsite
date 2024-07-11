@@ -1,14 +1,19 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import './Contact.css'
 import msg_icon from '../../assets/msg-icon.png'
 import mail_icon from '../../assets/mail-icon.png'
 import phone_icon from '../../assets/phone-icon.png'
 import location_icon from '../../assets/location-icon.png'
 import white_arrow from '../../assets/white-arrow.png'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 function Contact() {
+    useEffect(()=>{
+        AOS.init({duration:2000})
+    })
   return (
-   <div className="contact">
-    <div className="contact-col">
+   <div className="contact" >
+    <div className="contact-col" data-aos="fade-right">
         <h3>Send us a message <img src={msg_icon} alt="" /></h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit adipisci quasi necessitatibus sint quia, pariatur ipsa quaerat voluptates quam, tempora aliquam reprehenderit excepturi distinctio repellat.</p>
 
@@ -18,7 +23,7 @@ function Contact() {
             <li> <img src={location_icon} alt="" />P.O. Tilwara Ghat Bargi Hills Jabalpur</li>
         </ul>
     </div>
-    <div className="contact-col">
+    <div className="contact-col" data-aos="fade-left">
 <form >
 <label>Your Name</label>
 <input type="text" name="name" placeholder='Enter Your Name' required />

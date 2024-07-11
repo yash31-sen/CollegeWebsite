@@ -1,0 +1,10 @@
+.container{
+    background-color: #F5F5F5;
+
+}
+.section{
+    background-color: #F5F5F5;
+}
+.testimonials-section ,.contact-section{
+    background-image: url('../../FrontEnd/src/assets/background.jpeg');
+}

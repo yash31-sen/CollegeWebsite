@@ -60,9 +60,9 @@
 .fjmain-popup {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 1s ease-out;
+  /* opacity: 0; */
+  /* transform: translateY(100%); */
+  /* transition: all 1s ease-out; */
 }
 
 .fjmain-popup.fjmain-popUp {
@@ -75,7 +75,7 @@
   margin: 0; /* No space between images */
   position: relative;
   z-index: 1;
-  transition: box-shadow 0.3s ease;
+  /* transition: box-shadow 0.3s ease; */
 }
 
 .fjmain-image:hover {
@@ -91,23 +91,23 @@
   height: 100%;
   background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png');
   opacity: 0;
-  transition: opacity 0.3s ease;
+  /* transition: opacity 0.3s ease; */
   z-index: -1;
 }
 
 .fjmain-image:hover::before {
   opacity: 1;
-  animation: sparkle 1s infinite ease-in-out;
+  /* animation: sparkle 1s infinite ease-in-out; */
 }
 
-@keyframes sparkle {
+/* @keyframes sparkle {
   0%, 100% {
     opacity: 0;
   }
   50% {
     opacity: 0.6;
   }
-}
+} */
 
 .fjmain-heading {
   font-size: 24px;

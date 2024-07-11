@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useEffect} from 'react'
 import './Testimonials.css'
 import next_icon from '../../assets/next-icon.png'
 import back_icon from '../../assets/back-icon.png'
@@ -6,7 +6,12 @@ import user_1 from '../../assets/user-1.png'
 import user_2 from '../../assets/user-2.png'
 import user_3 from '../../assets/user-3.png'
 import user_4 from '../../assets/user-4.png'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 function Testimonilas() {
+    useEffect(()=>{
+        AOS.init({duration:2000})
+    })
 
     const slider=useRef();
     let tx=0;
@@ -25,7 +30,7 @@ const slideBackward=()=>{
 
     return (
 
-        <div className="Testimonials">
+        <div className="Testimonials" data-aos="fade-up">
             <img src={next_icon} alt="" className='next-btn'  onClick={slideForward}/>
             <img src={next_icon} alt="" className='back-btn' onClick={slideBackward}/>
             <div className="slider">

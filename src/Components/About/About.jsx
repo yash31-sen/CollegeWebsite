@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './About.css';
 import about_img from '../../assets/about.png';
 import play_icon from '../../assets/play-icon.png';
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 function About({ setPlayState }) { // Destructure the prop correctly
+  useEffect(()=>{
+    AOS.init({duration:2000})
+})
   return (
+    
     <div className="about">
       <div className="about-left">
-        <img src={about_img} alt="About" className='about-img' />
-        <img src={play_icon} alt="Play" className='play-icon' onClick={() => setPlayState(true)} />
+        <img src={about_img} alt="About" className='about-img' data-aos="fade-up-right"/>
+        <img src={play_icon} alt="Play" data-aos="fade-up-right"   className='play-icon' onClick={() => setPlayState(true)} />
       </div>
       <div className="about-right">
         <h3>About Gyan Ganga</h3>

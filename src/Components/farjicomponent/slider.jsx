@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import "./slider.css";
 
-const slider = () => {
+const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
@@ -32,25 +34,19 @@ const slider = () => {
         {slides[currentSlide].row1.map((item, index) => {
           const [number, ...text] = item.split(" ");
           return (
-            <div key={index} className="fjmain-cell">
-              <span className="fjmain-number">{number}</span>
-              <span className="fjmain-text">{text.join(" ")}</span>
-            </div>
+            <NumberCell key={index} number={number} text={text.join(" ")} />
           );
         })}
         {slides[currentSlide].row2.map((item, index) => {
           const [number, ...text] = item.split(" ");
           return (
-            <div key={index} className="fjmain-cell">
-              <span className="fjmain-number">{number}</span>
-              <span className="fjmain-text">{text.join(" ")}</span>
-            </div>
+            <NumberCell key={index} number={number} text={text.join(" ")} />
           );
         })}
       </div>
       <div className="fjmain-slider-buttons">
         <button className="fjmain-slider-button" onClick={prevSlide}>
-        Prev
+          Prev
         </button>
         <button className="fjmain-slider-button" onClick={nextSlide}>
           Next
@@ -60,4 +56,20 @@ const slider = () => {
   );
 };
 
-export default slider;
+const NumberCell = ({ number, text }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.1, // Trigger when the element is at least 10% visible
+  });
+
+  return (
+    <div className="fjmain-cell" ref={ref}>
+      <span className="fjmain-number">
+        {inView ? <CountUp end={parseInt(number)} duration={2} /> : number}
+      </span>
+      <span className="fjmain-text">{text}</span>
+    </div>
+  );
+};
+
+export default Slider;
