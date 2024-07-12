@@ -8,17 +8,17 @@ import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer';
 import Fjmain from './Components/farjicomponent/fjmain';
+import Navbar from './Components/Navbar/Navbar'
+import Hero from './Components/Hero/Hero'
 import './App.css'
 function App() {
   const [playState, setPlayState] = useState(false);
 
   return (
     <>
+    <Navbar/>
+    <Hero/>
       <div className="container">
-
-        <div className="section Header-section">
-      
-        </div>
         <div className="section programs-section">
           <Title subtitle={"What We Offer"} title={"Our Programs"} />
           <Programs />

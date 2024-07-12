@@ -1,0 +1,29 @@
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background: url('../../assets/clg-f.jpg');
+    background-size: cover;
+    background-position: center;
+    /* color: #fff; */
+    /* opacity: 0.6 ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text{
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 10px;
+}
+
+.hero-text h1{
+    font-size: 40px ;
+    font-weight: 600;
+}
+
+.hero-text p{
+    max-width: 700px;
+    margin: 10px auto 20 px;
+    line-height:1.8 ;
+}
