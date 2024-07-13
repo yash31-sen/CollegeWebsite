@@ -10,10 +10,11 @@ import VideoPlayer from './Components/VideoPlayer/VideoPlayer';
 import Fjmain from './Components/farjicomponent/fjmain';
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
+
 import './App.css'
 function App() {
   const [playState, setPlayState] = useState(false);
-
+  
   return (
     <>
     <Navbar/>

@@ -15,6 +15,8 @@ function Programs() {
     })
   return (
     <div className="programs" data-aos="fade-up">
+        
+
         <div className="program"data-aos="fade-down" data-aos-duration='10000'>
             <img src={program1} alt="" />
             <div className="caption">

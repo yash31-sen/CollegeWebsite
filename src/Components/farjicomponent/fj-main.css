@@ -10,6 +10,7 @@
 }
 
 .fjmain-container {
+  
   background-image: url("https://c4.wallpaperflare.com/wallpaper/845/160/16/line-yellow-grey-background-black-hd-wallpaper-preview.jpg");
   display: flex;
   justify-content: space-between;
@@ -58,6 +59,7 @@
 }
 
 .fjmain-popup {
+  
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   /* opacity: 0; */
@@ -66,11 +68,13 @@
 }
 
 .fjmain-popup.fjmain-popUp {
+  
   opacity: 1;
   transform: translateY(0);
 }
 
 .fjmain-image {
+  
   width: 100%;
   margin: 0; /* No space between images */
   position: relative;
@@ -150,4 +154,9 @@
   .fjmain-left-div {
     margin: 5px -19px;
   }
+}
+
+
+.fjmain-right-div{
+  overflow: hidden;
 }

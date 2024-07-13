@@ -1,0 +1,37 @@
+.nav1dropdown2-main{
+    width: 100%;
+    height: 100%;
+}
+
+.nav1dropdown2{
+   /* margin-top: 84.5vh; */
+    width: 100%;
+    height: 80vh;
+    background-color: #8d87a1;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav1dropdown1-left{
+    width: 25%;
+    border-right: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav1dropdown1MR{
+    width: 18.9%;
+    border-right: 2px solid black;
+}
+
+.nav1dropdown1MR ul{
+    margin-left: 5px;
+    list-style: none;
+}
+
+.content-li{
+    margin-top: 20px;
+}

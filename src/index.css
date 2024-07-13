@@ -72,6 +72,9 @@ button:focus-visible {
   padding: 0;
   overflow-x: hidden;
 }
+body{
+  overflow-x: hidden;
+}
  .btn{
     padding: 15px;
     border-radius: 30px;
